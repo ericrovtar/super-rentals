@@ -39,7 +39,7 @@ test('should list available rentals', function (assert) {
     });
 });
 
-test('should filter the list of rentals by city', function (asset) {
+test('should filter the list of rentals by city', function (assert) {
 
 });
 
