@@ -8,11 +8,23 @@ test('should show rentals as the homepage', function (assert) {
 });
 
 test('should link to information about the company', function (assert) {
+    visit('/');
 
+    click('a:contains("About")');
+
+    andThen(function() {
+        assert.equal(currentUrl(), '/about', 'should navigate to about');
+    });
 });
 
 test('should link to contact information', function (assert) {
+    visit('/');
 
+    click('a:contains("Contact")');
+
+    andThen(function() {
+        assert.equal(currentUrl(), '/contact', 'should navigate to contact');
+    })
 });
 
 test('should list available rentals', function (assert) {
